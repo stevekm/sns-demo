@@ -6,5 +6,5 @@ wes:
 	sns/run wes
 
 wes-pairs:
-	/bin/mv samples.pairs.csv.usethis samples.pairs.csv && \
+	/bin/cp samples.pairs.csv.usethis samples.pairs.csv && \
 	sns/run wes-pairs-snv
