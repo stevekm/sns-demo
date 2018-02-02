@@ -1,0 +1,7 @@
+Target,total_coverage,average_coverage,SeraCare-1to1-Positive_total_cvg,SeraCare-1to1-Positive_mean_cvg,SeraCare-1to1-Positive_granular_Q1,SeraCare-1to1-Positive_granular_median,SeraCare-1to1-Positive_granular_Q3,SeraCare-1to1-Positive_%_above_10,SeraCare-1to1-Positive_%_above_50,SeraCare-1to1-Positive_%_above_100,SeraCare-1to1-Positive_%_above_500
+chr13:113976597-113976736,110003,785.74,110003,785.74,766,804,820,100.0,100.0,100.0,100.0
+chr15:99500290-99500671,305974,800.98,305974,800.98,725,835,875,100.0,100.0,100.0,100.0
+chr20:62338351-62338443,11696,125.76,11696,125.76,118,130,140,100.0,100.0,92.5,0.0
+chr21:46330640-46330700,55591,911.33,55591,911.33,879,920,949,100.0,100.0,100.0,100.0
+chrX:153775004-153775085,17413,212.35,17413,212.35,199,218,229,100.0,100.0,100.0,0.0
+chrY:1281449-1281513,0,0.00,0,0.00,1,1,1,0.0,0.0,0.0,0.0

@@ -1,0 +1,2 @@
+#SAMPLE,MEAN COVERAGE,MEDIAN COVERAGE,%_bases_above_10,%_bases_above_50,%_bases_above_100,%_bases_above_500
+SeraCare-1to1-Positive,608.36,781,92.1,92.1,91.3,70.8

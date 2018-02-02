@@ -1,0 +1,650 @@
+
+ ========== ROUTE: wes ========== 
+
+ * proj_dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo 
+ * sample: HapMap-B17-1267 
+ * code_dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns 
+ * qsub_dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-qsub 
+ * threads: 16 
+
+ ========== SEGMENT: fastq-clean ========== 
+
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/HapMap-B17-1267_S8_L001_R1_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R1.fastq.gz
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/HapMap-B17-1267_S8_L001_R2_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R2.fastq.gz
+Thu Feb  1 19:33:01 EST 2018
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/HapMap-B17-1267_S8_L002_R1_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R1.fastq.gz
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/HapMap-B17-1267_S8_L002_R2_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R2.fastq.gz
+Thu Feb  1 19:33:31 EST 2018
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/HapMap-B17-1267_S8_L003_R1_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R1.fastq.gz
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/HapMap-B17-1267_S8_L003_R2_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R2.fastq.gz
+Thu Feb  1 19:34:01 EST 2018
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/HapMap-B17-1267_S8_L004_R1_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R1.fastq.gz
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/HapMap-B17-1267_S8_L004_R2_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R2.fastq.gz
+Thu Feb  1 19:34:32 EST 2018
+FASTQ R1: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R1.fastq.gz
+FASTQ R2: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R2.fastq.gz
+READS R1: 12179
+READS R2: 12179
+
+ ========== SEGMENT: fastq-trim-trimmomatic ========== 
+
+
+ * trimmomatic: /local/apps/trimmomatic/0.33/trimmomatic-0.33.jar 
+ * run type: PE 
+ * FASTQ R1: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R1.fastq.gz 
+ * FASTQ R2: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R2.fastq.gz 
+ * FASTQ R1 trimmed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R1.trim.fastq.gz 
+ * FASTQ R2 trimmed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R2.trim.fastq.gz 
+ * FASTQ R1 trimmed unpaired: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R1.unpaired.fastq.gz 
+ * FASTQ R2 trimmed unpaired: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R2.unpaired.fastq.gz 
+
+CMD: 
+java -Xms16G -Xmx16G -jar /local/apps/trimmomatic/0.33/trimmomatic-0.33.jar PE -threads 16 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R1.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/HapMap-B17-1267_R2.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R1.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R1.unpaired.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R2.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R2.unpaired.fastq.gz ILLUMINACLIP:/ifs/home/id460/ref/contaminants/trimmomatic.fa:2:30:10:1:true TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:35 2> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-trimmomatic/HapMap-B17-1267.txt
+
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R1.unpaired.fastq.gz'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R2.unpaired.fastq.gz'
+
+ ========== SEGMENT: align-bwa-mem ========== 
+
+
+ * bwa: /local/apps/bwa/0.7.17/bwa 
+ * bwa version: Version: 0.7.17-r1188 
+ * sambamba: /ifs/home/id460/software/sambamba/sambamba_v0.6.7 
+ * sambamba version: sambamba 0.6.7 
+ * BWA REF: /ifs/data/sequence/Illumina/igor/ref/hg19/BWA/genome.fa 
+ * FASTQ R1: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R1.trim.fastq.gz 
+ * FASTQ R2: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R2.trim.fastq.gz 
+ * BAM: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/HapMap-B17-1267.bam 
+
+CMD: 
+bwa mem -M -v 1 -t 16 -R '@RG\tID:HapMap-B17-1267\tSM:HapMap-B17-1267\tLB:HapMap-B17-1267\tPL:ILLUMINA' /ifs/data/sequence/Illumina/igor/ref/hg19/BWA/genome.fa /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R1.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R2.trim.fastq.gz | /ifs/home/id460/software/sambamba/sambamba_v0.6.7 view --sam-input --nthreads=16 --filter='mapping_quality>=10' --format=bam --compression-level=0 /dev/stdin | /ifs/home/id460/software/sambamba/sambamba_v0.6.7 sort --nthreads=16 --memory-limit=16GB --out=/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/HapMap-B17-1267.bam /dev/stdin
+
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (135, 185, 248)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 474)
+[M::mem_pestat] mean and std.dev: (197.39, 80.45)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 587)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (117, 153, 257)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 537)
+[M::mem_pestat] mean and std.dev: (199.47, 120.83)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 683)
+[M::mem_pestat] skip orientation RR
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -M -v 1 -t 16 -R @RG\tID:HapMap-B17-1267\tSM:HapMap-B17-1267\tLB:HapMap-B17-1267\tPL:ILLUMINA /ifs/data/sequence/Illumina/igor/ref/hg19/BWA/genome.fa /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R1.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/HapMap-B17-1267_R2.trim.fastq.gz
+[main] Real time: 35.794 sec; CPU: 8.132 sec
+CMD: /ifs/home/id460/software/sambamba/sambamba_v0.6.7 flagstat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/HapMap-B17-1267.bam > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-align-bwa-mem/HapMap-B17-1267.flagstat.txt
+
+ ========== SEGMENT: bam-dedup-sambamba ========== 
+
+ * sambamba: /ifs/home/id460/software/sambamba/sambamba_v0.6.7 
+ * sambamba version: sambamba 0.6.7 
+ * BAM IN: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/HapMap-B17-1267.bam 
+ * BAM OUT: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam 
+CMD: 
+/ifs/home/id460/software/sambamba/sambamba_v0.6.7 markdup --remove-duplicates --nthreads 16 --hash-table-size 525000 --overflow-list-size 525000 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/HapMap-B17-1267.bam /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam 2> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-dedup-sambamba/HapMap-B17-1267.log.txt
+
+CMD: /ifs/home/id460/software/sambamba/sambamba_v0.6.7 flagstat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-dedup-sambamba/HapMap-B17-1267.flagstat.txt
+
+ ========== SEGMENT: qc-fragment-sizes ========== 
+
+ * R: /local/apps/R/3.3.0/bin/R 
+ * R version: R version 3.3.0 (2016-05-03) -- "Supposedly Educational" 
+ * Rscript: /local/apps/R/3.3.0/bin/Rscript 
+ * Rscript version: R scripting front-end version 3.3.0 (2016-05-03) 
+CMD: Rscript --vanilla /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/scripts/fragment-sizes.R HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam
+loading package: Rsamtools
+loading package: readr
+loading package: reshape2
+loading package: ggplot2
+loading package: cowplot
+mean: 203.2
+median: 189
+sd: 87.3
+Warning message:
+Removed 3 rows containing missing values (geom_path). 
+
+ ========== SEGMENT: qc-target-reads-gatk ========== 
+
+ * GATK: /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar 
+ * GATK version: 3.8-0-ge9d806836 
+ * BAM IN: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam 
+ * OUT PREFIX: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/HapMap-B17-1267.genome 
+ * OUT PREFIX: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/HapMap-B17-1267.pad500 
+ * OUT PREFIX: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/HapMap-B17-1267.pad100 
+ * OUT PREFIX: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/HapMap-B17-1267.bed 
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE -rf BadCigar -nt 16 --logging_level ERROR --omitIntervalStatistics --omitLocusTable --omitDepthOutputAtEachBase -ct 10 -ct 100 -mbq 20 -mmq 20 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/HapMap-B17-1267.genome
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE -rf BadCigar -nt 16 --logging_level ERROR --omitIntervalStatistics --omitLocusTable --omitDepthOutputAtEachBase -ct 10 -ct 100 -mbq 20 -mmq 20 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 500 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/HapMap-B17-1267.pad500
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE -rf BadCigar -nt 16 --logging_level ERROR --omitIntervalStatistics --omitLocusTable --omitDepthOutputAtEachBase -ct 10 -ct 100 -mbq 20 -mmq 20 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 100 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/HapMap-B17-1267.pad100
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE -rf BadCigar -nt 16 --logging_level ERROR --omitIntervalStatistics --omitLocusTable --omitDepthOutputAtEachBase -ct 10 -ct 100 -mbq 20 -mmq 20 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/HapMap-B17-1267.bed
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+genome total coverage: 1622998
+bed +/- 500bp total coverage: 1187660
+bed +/- 500bp %: 73.1%
+bed +/- 100bp total coverage: 1082192
+bed +/- 100bp %: 66.6%
+bed total coverage: 670831
+bed %: 41.3%
+
+ ========== SEGMENT: bam-ra-rc-gatk ========== 
+
+
+ * R: /local/apps/R/3.3.0/bin/R 
+ * R version: R version 3.3.0 (2016-05-03) -- "Supposedly Educational" 
+ * Rscript: /local/apps/R/3.3.0/bin/Rscript 
+ * Rscript version: R scripting front-end version 3.3.0 (2016-05-03) 
+
+checking R package: getopt
+loading package: getopt
+checking R package: optparse
+loading package: optparse
+checking R package: gsalib
+loading package: gsalib
+checking R package: reshape
+loading package: reshape
+checking R package: gplots
+loading package: gplots
+checking R package: ggplot2
+loading package: ggplot2
+checking R package: data.table
+loading package: data.table
+checking R package: naturalsort
+loading package: naturalsort
+installing package: naturalsort
+Bioconductor version 3.3 (BiocInstaller 1.22.3), ?biocLite for help
+A newer version of Bioconductor is available for this version of R,
+  ?BiocUpgrade for help
+BioC_mirror: https://bioconductor.org
+Using Bioconductor 3.3 (BiocInstaller 1.22.3), R 3.3.0 (2016-05-03).
+Installing package(s) 'naturalsort'
+trying URL 'https://cran.rstudio.com/src/contrib/naturalsort_0.1.3.tar.gz'
+Content type 'application/x-gzip' length 4199 bytes
+==================================================
+downloaded 4199 bytes
+
+* installing *source* package 'naturalsort' ...
+** package 'naturalsort' successfully unpacked and MD5 sums checked
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (naturalsort)
+
+The downloaded source packages are in
+	'/tmp/4494454.1.all.q/RtmpAYZi84/downloaded_packages'
+Warning message:
+In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
+  there is no package called 'naturalsort'
+
+ * GATK: /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar 
+ * GATK version: 3.8-0-ge9d806836 
+ * BAM IN: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam 
+ * BAM RA: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/HapMap-B17-1267.dd.ra.bam 
+
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T RealignerTargetCreator -dt NONE --logging_level ERROR -nt 16 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -known /ifs/home/id460/ref/hg19/gatk-bundle/1000G_phase1.indels.hg19.vcf -known /ifs/home/id460/ref/hg19/gatk-bundle/Mills_and_1000G_gold_standard.indels.hg19.vcf --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 10 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.intervals
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T IndelRealigner -dt NONE --logging_level ERROR --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --maxReadsForRealignment 50000 -known /ifs/home/id460/ref/hg19/gatk-bundle/1000G_phase1.indels.hg19.vcf -known /ifs/home/id460/ref/hg19/gatk-bundle/Mills_and_1000G_gold_standard.indels.hg19.vcf -targetIntervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.intervals --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/HapMap-B17-1267.dd.ra.bam
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T BaseRecalibrator --logging_level ERROR -nct 16 -rf BadCigar --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/1000G_phase1.indels.hg19.vcf -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/Mills_and_1000G_gold_standard.indels.hg19.vcf -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/dbsnp_138.hg19.vcf --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 10 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/HapMap-B17-1267.dd.ra.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.table1.txt
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T BaseRecalibrator --logging_level ERROR -nct 16 -rf BadCigar --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/1000G_phase1.indels.hg19.vcf -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/Mills_and_1000G_gold_standard.indels.hg19.vcf -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/dbsnp_138.hg19.vcf --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 10 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/HapMap-B17-1267.dd.ra.bam -BQSR /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.table1.txt --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.table2.txt
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T AnalyzeCovariates --logging_level ERROR --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -before /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.table1.txt -after /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.table2.txt -csv /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.csv -plots /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.pdf
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T PrintReads --logging_level ERROR -nct 16 -rf BadCigar --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -BQSR /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.table1.txt --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/HapMap-B17-1267.dd.ra.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+`/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bai' -> `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam.bai'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/HapMap-B17-1267.dd.bam.bai'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/HapMap-B17-1267.dd.ra.bam'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/HapMap-B17-1267.dd.ra.bai'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.intervals'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.table1.txt'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/HapMap-B17-1267.table2.txt'
+
+ ========== SEGMENT: qc-coverage-gatk ========== 
+
+ * GATK: /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar 
+ * GATK version: 3.8-0-ge9d806836 
+ * BAM: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam 
+ * BED: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed 
+ * output prefix: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/HapMap-B17-1267 
+ * sample_summary: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/HapMap-B17-1267.sample_summary 
+CMD: 
+java -Xms32G -Xmx32G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE --logging_level ERROR -rf BadCigar --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --omitDepthOutputAtEachBase -ct 10 -ct 50 -ct 100 -ct 500 -mbq 20 -mmq 20 --nBins 999 --start 1 --stop 1000 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/HapMap-B17-1267
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/HapMap-B17-1267.sample_statistics'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/HapMap-B17-1267.sample_interval_statistics'
+
+ ========== SEGMENT: snvs-lofreq ========== 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed | LC_ALL=C sort -k1,1 -k2,2n | bedtools slop -g /ifs/data/sequence/Illumina/igor/ref/hg19/chrom.sizes -b 10 | bedtools merge -d 5 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.pad10.bed
+ 
+
+
+ * LoFreq: /ifs/home/id460/bin/lofreq 
+ * LoFreq version: version: 2.1.2 
+ * BAM: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam 
+ * BED: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.pad10.bed 
+ * VCF original: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.original.vcf 
+ * VCF fixed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.vcf 
+
+
+ CMD: 
+/ifs/home/id460/bin/lofreq call-parallel --call-indels --pp-threads 16 --ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --bed /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.pad10.bed --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.original.vcf /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam
+ 
+
+INFO [2018-02-01 19:51:33,051]: Using 16 threads with following basic args: lofreq call --call-indels --ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam
+
+WARNING [2018-02-01 19:51:33,060]: Regions getting too small to be efficiently processed
+INFO [2018-02-01 19:51:33,066]: Adding 16 commands to mp-pool
+Number of substitution tests performed: 1284
+Number of indel tests performed: 10
+INFO [2018-02-01 19:51:35,566]: Executing lofreq filter -i /tmp/4494454.1.all.q/lofreq2_call_parallelafIdNH/concat.vcf.gz -o /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.original.vcf --snvqual-thresh 51 --indelqual-thresh 30
+
+
+ CMD: bgzip -c /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.original.vcf > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.original.vcf.bgz 
+
+
+ CMD: bcftools index /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.original.vcf.bgz 
+
+
+ CMD: 
+bcftools norm --multiallelics -both --output-type v /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.original.vcf.bgz | bcftools norm --fasta-ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --output-type v - | bcftools view --exclude 'DP<5' --output-type v > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.vcf
+ 
+
+Lines   total/split/realigned/skipped:	6/0/0/0
+Lines   total/split/realigned/skipped:	6/0/0/0
+
+ CMD: bash /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/segments/annot-annovar.sh /ifs/data/molecpathlab/NGS580_WES-development/sns-demo HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.vcf 
+
+
+ ========== SEGMENT: annot-annovar ========== 
+
+
+ CMD: 
+perl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/scripts/vcf-table.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.vcf HapMap-B17-1267 | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.vcf.txt
+ 
+
+
+ * convert2annovar path: /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot 
+ * convert2annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl --format vcf4old --includeinfo /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/HapMap-B17-1267.vcf > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput
+ 
+
+NOTICE: Read 33 lines and wrote 0 different variants at 6 genomic positions (1 SNPs and 5 indels)
+NOTICE: Among 6 different variants at 6 positions, 0 are heterozygotes, 0 are homozygotes
+NOTICE: Among 1 SNPs, 0 are transitions, 1 are transversions (ratio=0.00)
+
+ * table_annovar path: /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot 
+ * table_annovar out prefix : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267 
+ * table_annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_multianno.txt 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ --outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267 --buildver hg19 --protocol refGene,avsnp147,gnomad_exome,gnomad_genome,kaviar_20150923,cosmic80,cadd13gt10,fathmm --operation g,f,f,f,f,f,f,f --argument '--splicing_threshold 10',,,,,,, --nastring . --remove
+ 
+
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.refGene -exonsort /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ --splicing_threshold 10>
+NOTICE: Output files were written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.refGene.variant_function, /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.refGene.exonic_variant_function
+NOTICE: Reading gene annotation from /ifs/home/id460/ref/annovar/hg19/hg19_refGene.txt ... Done with 63481 transcripts (including 15216 without coding sequence annotation) for 27720 unique genes
+NOTICE: Processing next batch with 6 unique variants in 6 input lines
+NOTICE: Reading FASTA sequences from /ifs/home/id460/ref/annovar/hg19/hg19_refGeneMrna.fa ... Done with 5 sequences
+WARNING: A total of 405 sequences will be ignored due to lack of correct ORF annotation
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=avsnp147
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype avsnp147 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_avsnp147_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_avsnp147_filtered
+NOTICE: Processing next batch with 6 unique variants in 6 input lines
+NOTICE: Database index loaded. Total number of bins is 27868332 and the number of bins to be scanned is 3
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_avsnp147.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_exome
+NOTICE: Finished reading 9 column headers for '-dbtype gnomad_exome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_exome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_exome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_gnomad_exome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_gnomad_exome_filtered
+NOTICE: Processing next batch with 6 unique variants in 6 input lines
+NOTICE: Database index loaded. Total number of bins is 772860 and the number of bins to be scanned is 3
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_exome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_genome
+NOTICE: Finished reading 8 column headers for '-dbtype gnomad_genome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_genome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_genome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_gnomad_genome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_gnomad_genome_filtered
+NOTICE: Processing next batch with 6 unique variants in 6 input lines
+NOTICE: Database index loaded. Total number of bins is 28127612 and the number of bins to be scanned is 3
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_genome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=kaviar_20150923
+NOTICE: Finished reading 3 column headers for '-dbtype kaviar_20150923'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype kaviar_20150923 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype kaviar_20150923 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_kaviar_20150923_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_kaviar_20150923_filtered
+NOTICE: Processing next batch with 6 unique variants in 6 input lines
+NOTICE: Database index loaded. Total number of bins is 28259366 and the number of bins to be scanned is 3
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_kaviar_20150923.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cosmic80
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cosmic80 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: the --dbtype cosmic80 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_cosmic80_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_cosmic80_filtered
+NOTICE: Processing next batch with 6 unique variants in 6 input lines
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cosmic80.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cadd13gt10
+NOTICE: Finished reading 2 column headers for '-dbtype cadd13gt10'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cadd13gt10 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype cadd13gt10 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_cadd13gt10_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_cadd13gt10_filtered
+NOTICE: Processing next batch with 6 unique variants in 6 input lines
+NOTICE: Database index loaded. Total number of bins is 13643770 and the number of bins to be scanned is 3
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cadd13gt10.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=fathmm
+NOTICE: Finished reading 2 column headers for '-dbtype fathmm'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype fathmm -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype fathmm is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_fathmm_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_fathmm_filtered
+NOTICE: Processing next batch with 6 unique variants in 6 input lines
+NOTICE: Database index loaded. Total number of bins is 28581845 and the number of bins to be scanned is 3
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_fathmm.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_multianno.txt
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.hg19_multianno.txt | awk -F $'	' 'BEGIN {OFS=FS} {print $1 ":" $2 ":" $4 ":" $5, $0}' | cut -f 1,5,6,7,8,9,10,11,12,13,22,30,33,35,36,37 | sed 's/Chr:Start:Ref:Alt/#MUT/g' | sed 's/avsnp1/dbSNP_1/g' | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.annot.txt
+ 
+
+
+ CMD: 
+LC_ALL=C join -a1 -t $'	' /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.vcf.txt /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.annot.txt > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.combined.txt
+ 
+
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.avinput'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/HapMap-B17-1267.annot.txt'
+total muts: 1
+coding muts: 1
+nonsynonymous muts: 1
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/*.combined.txt | LC_ALL=C sort -k1,1 -k2,2 | uniq > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.all.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.all.txt | grep -E 'refGene|exon|splicing' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.coding.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.all.txt | grep -E 'refGene|splicing|nonsynonymous|stopgain|stoploss|frameshift' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.nonsyn.txt
+ 
+
+
+ ========== SEGMENT: snvs-gatk-hc ========== 
+
+
+ * GATK: /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar 
+ * GATK version: 3.8-0-ge9d806836 
+ * BAM: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam 
+ * INTERVALS: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed 
+ * VCF original: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/HapMap-B17-1267.original.vcf 
+ * VCF fixed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/HapMap-B17-1267.vcf 
+
+
+ CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T HaplotypeCaller -dt NONE --logging_level ERROR -nct 16 --max_alternate_alleles 3 --standard_min_confidence_threshold_for_calling 50 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 10 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/HapMap-B17-1267.original.vcf
+ 
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+[INFO] Available threads: 32
+[INFO] Requested threads: 1
+[INFO] Using 1 threads
+[INFO] Available threads: 32
+[INFO] Requested threads: 1
+[INFO] Using 1 threads
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/HapMap-B17-1267.original.vcf | bcftools norm --multiallelics -both --output-type v - | bcftools norm --fasta-ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --output-type v - | bcftools view --exclude 'DP<5' --output-type v > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/HapMap-B17-1267.vcf
+ 
+
+Lines   total/split/realigned/skipped:	1/0/0/0
+Lines   total/split/realigned/skipped:	1/0/0/0
+
+ CMD: bash /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/segments/annot-annovar.sh /ifs/data/molecpathlab/NGS580_WES-development/sns-demo HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/HapMap-B17-1267.vcf 
+
+
+ ========== SEGMENT: annot-annovar ========== 
+
+
+ CMD: 
+perl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/scripts/vcf-table.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/HapMap-B17-1267.vcf HapMap-B17-1267 | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.vcf.txt
+ 
+
+
+ * convert2annovar path: /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot 
+ * convert2annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl --format vcf4old --includeinfo /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/HapMap-B17-1267.vcf > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput
+ 
+
+NOTICE: Read 60 lines and wrote 1 different variants at 1 genomic positions (1 SNPs and 0 indels)
+NOTICE: Among 1 different variants at 1 positions, 1 are heterozygotes, 0 are homozygotes
+NOTICE: Among 1 SNPs, 0 are transitions, 1 are transversions (ratio=0.00)
+
+ * table_annovar path: /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot 
+ * table_annovar out prefix : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267 
+ * table_annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_multianno.txt 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ --outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267 --buildver hg19 --protocol refGene,avsnp147,gnomad_exome,gnomad_genome,kaviar_20150923,cosmic80,cadd13gt10,fathmm --operation g,f,f,f,f,f,f,f --argument '--splicing_threshold 10',,,,,,, --nastring . --remove
+ 
+
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.refGene -exonsort /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ --splicing_threshold 10>
+NOTICE: Output files were written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.refGene.variant_function, /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.refGene.exonic_variant_function
+NOTICE: Reading gene annotation from /ifs/home/id460/ref/annovar/hg19/hg19_refGene.txt ... Done with 63481 transcripts (including 15216 without coding sequence annotation) for 27720 unique genes
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Reading FASTA sequences from /ifs/home/id460/ref/annovar/hg19/hg19_refGeneMrna.fa ... Done with 2 sequences
+WARNING: A total of 405 sequences will be ignored due to lack of correct ORF annotation
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=avsnp147
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype avsnp147 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_avsnp147_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_avsnp147_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 27868332 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_avsnp147.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_exome
+NOTICE: Finished reading 9 column headers for '-dbtype gnomad_exome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_exome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_exome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_gnomad_exome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_gnomad_exome_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 772860 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_exome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_genome
+NOTICE: Finished reading 8 column headers for '-dbtype gnomad_genome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_genome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_genome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_gnomad_genome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_gnomad_genome_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 28127612 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_genome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=kaviar_20150923
+NOTICE: Finished reading 3 column headers for '-dbtype kaviar_20150923'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype kaviar_20150923 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype kaviar_20150923 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_kaviar_20150923_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_kaviar_20150923_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 28259366 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_kaviar_20150923.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cosmic80
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cosmic80 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: the --dbtype cosmic80 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_cosmic80_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_cosmic80_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cosmic80.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cadd13gt10
+NOTICE: Finished reading 2 column headers for '-dbtype cadd13gt10'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cadd13gt10 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype cadd13gt10 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_cadd13gt10_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_cadd13gt10_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 13643770 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cadd13gt10.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=fathmm
+NOTICE: Finished reading 2 column headers for '-dbtype fathmm'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype fathmm -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype fathmm is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_fathmm_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_fathmm_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 28581845 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_fathmm.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_multianno.txt
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.hg19_multianno.txt | awk -F $'	' 'BEGIN {OFS=FS} {print $1 ":" $2 ":" $4 ":" $5, $0}' | cut -f 1,5,6,7,8,9,10,11,12,13,22,30,33,35,36,37 | sed 's/Chr:Start:Ref:Alt/#MUT/g' | sed 's/avsnp1/dbSNP_1/g' | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.annot.txt
+ 
+
+
+ CMD: 
+LC_ALL=C join -a1 -t $'	' /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.vcf.txt /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.annot.txt > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.combined.txt
+ 
+
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.avinput'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/HapMap-B17-1267.annot.txt'
+total muts: 1
+coding muts: 1
+nonsynonymous muts: 1
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/*.combined.txt | LC_ALL=C sort -k1,1 -k2,2 | uniq > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.all.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.all.txt | grep -E 'refGene|exon|splicing' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.coding.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.all.txt | grep -E 'refGene|splicing|nonsynonymous|stopgain|stoploss|frameshift' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.nonsyn.txt
+ 
+
+Thu Feb  1 20:08:57 EST 2018

@@ -1,0 +1,13 @@
+
+ ========== ROUTE: wes-pairs-snv ========== 
+
+ * proj_dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo 
+ * sample T: SeraCare-1to1-Positive 
+ * sample N: HapMap-B17-1267 
+ * code_dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns 
+ * qsub_dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-qsub 
+CMD: qsub -N sns.snvs-mutect2.SeraCare-1to1-Positive-HapMap-B17-1267 -M kellys04@nyumc.org -m a -j y -cwd -b y -hard -l mem_free=64G bash /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/segments/snvs-mutect2.sh /ifs/data/molecpathlab/NGS580_WES-development/sns-demo SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam
+Your job 4494463 ("sns.snvs-mutect2.SeraCare-1to1-Positive-HapMap-B17-1267") has been submitted
+CMD: qsub -N sns.snvs-strelka.SeraCare-1to1-Positive-HapMap-B17-1267 -M kellys04@nyumc.org -m a -j y -cwd -b y -hard -l mem_free=64G -pe threaded 8 bash /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/segments/snvs-strelka.sh /ifs/data/molecpathlab/NGS580_WES-development/sns-demo SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam 8
+Your job 4494464 ("sns.snvs-strelka.SeraCare-1to1-Positive-HapMap-B17-1267") has been submitted
+Thu Feb  1 20:35:48 EST 2018

@@ -1,0 +1,24 @@
+##fileformat=VCFv4.0
+##fileDate=20180201
+##source=lofreq call --call-indels --ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --no-default-filter -r chr13:113976587-113976666 -o /tmp/4494454.1.all.q/lofreq2_call_parallelafIdNH/0.vcf.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam 
+##reference=/ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw Depth">
+##INFO=<ID=AF,Number=1,Type=Float,Description="Allele Frequency">
+##INFO=<ID=SB,Number=1,Type=Integer,Description="Phred-scaled strand bias at this position">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Counts for ref-forward bases, ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=CONSVAR,Number=0,Type=Flag,Description="Indicates that the variant is a consensus variant (as opposed to a low frequency variant).">
+##INFO=<ID=HRUN,Number=1,Type=Integer,Description="Homopolymer length to the right of report indel position">
+##FILTER=<ID=min_snvqual_41,Description="Minimum SNV Quality (Phred) 41">
+##FILTER=<ID=min_indelqual_24,Description="Minimum Indel Quality (Phred) 24">
+##FILTER=<ID=min_dp_10,Description="Minimum Coverage 10">
+##FILTER=<ID=sb_fdr,Description="Strand-Bias Multiple Testing Correction: fdr corr. pvalue > 0.001000">
+##FILTER=<ID=min_snvqual_51,Description="Minimum SNV Quality (Phred) 51">
+##FILTER=<ID=min_indelqual_30,Description="Minimum Indel Quality (Phred) 30">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr13	113976616	.	CG	C	31	PASS	DP=1111;AF=0.001800;SB=0;DP4=606,513,1,1;INDEL;HRUN=1
+chr13	113976660	.	CG	C	30	PASS	DP=1168;AF=0.001712;SB=0;DP4=588,589,1,1;INDEL;HRUN=4
+chr15	99500515	.	GC	G	32	PASS	DP=1084;AF=0.001845;SB=0;DP4=581,507,1,1;INDEL;HRUN=3
+chr15	99500560	.	TG	T	31	PASS	DP=1216;AF=0.001645;SB=0;DP4=622,596,1,1;INDEL;HRUN=4
+chr21	46330674	.	C	A	17218	PASS	DP=1315;AF=0.492015;SB=1;DP4=329,338,313,334
+chr21	46330689	.	GC	G	30	PASS	DP=1260;AF=0.001587;SB=0;DP4=581,684,1,1;INDEL;HRUN=3

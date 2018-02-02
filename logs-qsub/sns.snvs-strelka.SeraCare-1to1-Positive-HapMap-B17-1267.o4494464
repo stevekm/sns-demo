@@ -1,0 +1,206 @@
+
+ ========== SEGMENT: snvs-strelka ========== 
+
+ * Manta config: /ifs/home/id460/software/manta/manta-1.2.1/bin/configManta.py 
+ * Manta version: 1.2.1 
+ * sample T : SeraCare-1to1-Positive 
+ * BAM T : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam 
+ * sample N : HapMap-B17-1267 
+ * BAM N : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam 
+ * output dir : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-manta 
+ * indels VCF : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-manta/results/variants/candidateSmallIndels.vcf.gz 
+
+ CMD: 
+/ifs/home/id460/software/manta/manta-1.2.1/bin/configManta.py --exome --referenceFasta /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --tumorBam /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam --normalBam /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam --runDir /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-manta
+ 
+
+
+Successfully created workflow run script.
+To execute the workflow, run the following script and set appropriate options:
+
+/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-manta/runWorkflow.py
+
+ CMD: 
+/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-manta/runWorkflow.py --quiet --mode local --jobs 8 --memGb 64  
+
+ * Strelka config: /ifs/home/id460/software/strelka/strelka-2.8.3/bin/configureStrelkaSomaticWorkflow.py 
+ * Strelka version: 2.8.3 
+ * sample T : SeraCare-1to1-Positive 
+ * BAM T : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam 
+ * sample N : HapMap-B17-1267 
+ * BAM N : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam 
+ * output dir : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-strelka 
+ * VCF original: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.snvs.original.vcf.gz 
+ * VCF original: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.indels.original.vcf.gz 
+ * VCF fixed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.snvs.vcf 
+ * VCF fixed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.indels.vcf 
+
+ CMD: 
+/ifs/home/id460/software/strelka/strelka-2.8.3/bin/configureStrelkaSomaticWorkflow.py --exome --outputCallableRegions --referenceFasta /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --tumorBam /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam --normalBam /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam --indelCandidates /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-manta/results/variants/candidateSmallIndels.vcf.gz --runDir /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-strelka
+ 
+
+
+Successfully created workflow run script.
+To execute the workflow, run the following script and set appropriate options:
+
+/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-strelka/runWorkflow.py
+
+ CMD: 
+/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-strelka/runWorkflow.py --quiet --mode local --jobs 8 --memGb 64  
+
+`/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-strelka/results/variants/somatic.snvs.vcf.gz' -> `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.snvs.original.vcf.gz'
+`/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-snvs-strelka/SeraCare-1to1-Positive-HapMap-B17-1267-strelka/results/variants/somatic.indels.vcf.gz' -> `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.indels.original.vcf.gz'
+
+ CMD: 
+gzip -cd /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.snvs.original.vcf.gz | grep -E '^#|PASS' | bcftools norm --multiallelics -both --output-type v - | bcftools norm --fasta-ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --output-type v - > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.snvs.vcf
+ 
+
+Lines   total/split/realigned/skipped:	2/0/0/0
+Lines   total/split/realigned/skipped:	2/0/0/0
+
+ CMD: 
+gzip -cd /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.indels.original.vcf.gz | grep -E '^#|PASS' | bcftools norm --multiallelics -both --output-type v - | bcftools norm --fasta-ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --output-type v - > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.indels.vcf
+ 
+
+Lines   total/split/realigned/skipped:	0/0/0/0
+Lines   total/split/realigned/skipped:	0/0/0/0
+
+ CMD: bash /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/segments/annot-annovar.sh /ifs/data/molecpathlab/NGS580_WES-development/sns-demo SeraCare-1to1-Positive:HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.all.vcf 
+
+
+ ========== SEGMENT: annot-annovar ========== 
+
+
+ CMD: 
+perl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/scripts/vcf-table.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.all.vcf SeraCare-1to1-Positive:HapMap-B17-1267 | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.vcf.txt
+ 
+
+
+ * convert2annovar path: /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot 
+ * convert2annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl --format vcf4old --includeinfo /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka/SeraCare-1to1-Positive-HapMap-B17-1267.all.vcf > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput
+ 
+
+NOTICE: Read 84 lines and wrote 0 different variants at 2 genomic positions (2 SNPs and 0 indels)
+NOTICE: Among 2 different variants at 2 positions, 0 are heterozygotes, 0 are homozygotes
+NOTICE: Among 2 SNPs, 2 are transitions, 0 are transversions (ratio=NA)
+
+ * table_annovar path: /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot 
+ * table_annovar out prefix : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267 
+ * table_annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_multianno.txt 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ --outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267 --buildver hg19 --protocol refGene,avsnp147,gnomad_exome,gnomad_genome,kaviar_20150923,cosmic80,cadd13gt10,fathmm --operation g,f,f,f,f,f,f,f --argument '--splicing_threshold 10',,,,,,, --nastring . --remove
+ 
+
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.refGene -exonsort /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ --splicing_threshold 10>
+NOTICE: Output files were written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.refGene.variant_function, /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.refGene.exonic_variant_function
+NOTICE: Reading gene annotation from /ifs/home/id460/ref/annovar/hg19/hg19_refGene.txt ... Done with 63481 transcripts (including 15216 without coding sequence annotation) for 27720 unique genes
+NOTICE: Processing next batch with 2 unique variants in 2 input lines
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=avsnp147
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype avsnp147 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_avsnp147_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_avsnp147_filtered
+NOTICE: Processing next batch with 2 unique variants in 2 input lines
+NOTICE: Database index loaded. Total number of bins is 27868332 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_avsnp147.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_exome
+NOTICE: Finished reading 9 column headers for '-dbtype gnomad_exome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_exome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_exome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_gnomad_exome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_gnomad_exome_filtered
+NOTICE: Processing next batch with 2 unique variants in 2 input lines
+NOTICE: Database index loaded. Total number of bins is 772860 and the number of bins to be scanned is 0
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_exome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_genome
+NOTICE: Finished reading 8 column headers for '-dbtype gnomad_genome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_genome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_genome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_gnomad_genome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_gnomad_genome_filtered
+NOTICE: Processing next batch with 2 unique variants in 2 input lines
+NOTICE: Database index loaded. Total number of bins is 28127612 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_genome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=kaviar_20150923
+NOTICE: Finished reading 3 column headers for '-dbtype kaviar_20150923'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype kaviar_20150923 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype kaviar_20150923 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_kaviar_20150923_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_kaviar_20150923_filtered
+NOTICE: Processing next batch with 2 unique variants in 2 input lines
+NOTICE: Database index loaded. Total number of bins is 28259366 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_kaviar_20150923.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cosmic80
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cosmic80 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: the --dbtype cosmic80 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_cosmic80_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_cosmic80_filtered
+NOTICE: Processing next batch with 2 unique variants in 2 input lines
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cosmic80.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cadd13gt10
+NOTICE: Finished reading 2 column headers for '-dbtype cadd13gt10'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cadd13gt10 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype cadd13gt10 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_cadd13gt10_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_cadd13gt10_filtered
+NOTICE: Processing next batch with 2 unique variants in 2 input lines
+NOTICE: Database index loaded. Total number of bins is 13643770 and the number of bins to be scanned is 0
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cadd13gt10.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=fathmm
+NOTICE: Finished reading 2 column headers for '-dbtype fathmm'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype fathmm -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype fathmm is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_fathmm_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_fathmm_filtered
+NOTICE: Processing next batch with 2 unique variants in 2 input lines
+NOTICE: Database index loaded. Total number of bins is 28581845 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_fathmm.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_multianno.txt
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.hg19_multianno.txt | awk -F $'	' 'BEGIN {OFS=FS} {print $1 ":" $2 ":" $4 ":" $5, $0}' | cut -f 1,5,6,7,8,9,10,11,12,13,22,30,33,35,36,37 | sed 's/Chr:Start:Ref:Alt/#MUT/g' | sed 's/avsnp1/dbSNP_1/g' | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.annot.txt
+ 
+
+
+ CMD: 
+LC_ALL=C join -a1 -t $'	' /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.vcf.txt /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.annot.txt > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.combined.txt
+ 
+
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/SeraCare-1to1-Positive-HapMap-B17-1267.annot.txt'
+total muts: 2
+coding muts: 0
+nonsynonymous muts: 0
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot/*.combined.txt | LC_ALL=C sort -k1,1 -k2,2 | uniq > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot.all.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot.all.txt | grep -E 'refGene|exon|splicing' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot.coding.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot.all.txt | grep -E 'refGene|splicing|nonsynonymous|stopgain|stoploss|frameshift' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-Strelka-annot.nonsyn.txt
+ 
+

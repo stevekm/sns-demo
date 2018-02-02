@@ -1,0 +1,36 @@
+group:	/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam
+fragment length observations:	2196
+fragment length quantiles:
+0.01	67
+0.05	92
+0.1	111
+0.25	146
+0.5	202
+0.75	270
+0.9	343
+0.95	390
+0.99	467
+Total sampled reads:	12614
+Total sampled paired reads:	12614
+Total sampled unpaired reads:	0
+Total sampled paired reads with low MAPQ:	0
+Total sampled high-confidence read pairs passing all filters:	2199
+
+group:	/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam
+fragment length observations:	1966
+fragment length quantiles:
+0.01	69
+0.05	93
+0.1	109
+0.25	147
+0.5	208
+0.75	291
+0.9	371
+0.95	419
+0.99	524
+Total sampled reads:	9652
+Total sampled paired reads:	9652
+Total sampled unpaired reads:	0
+Total sampled paired reads with low MAPQ:	0
+Total sampled high-confidence read pairs passing all filters:	1966
+

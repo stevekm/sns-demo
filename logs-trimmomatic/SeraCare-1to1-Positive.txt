@@ -1,0 +1,22 @@
+TrimmomaticPE: Started with arguments: -threads 16 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R1.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R2.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.unpaired.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.unpaired.fastq.gz ILLUMINACLIP:/ifs/home/id460/ref/contaminants/trimmomatic.fa:2:30:10:1:true TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:35
+Using PrefixPair: 'AATGATACGGCGACCACCGAGATCTACAC' and 'CAAGCAGAAGACGGCATACGAGAT'
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using PrefixPair: 'AATGATACGGCGACCACCGAGATCTACACNNNNNNNNTCGTCGGCAGCGTC' and 'CAAGCAGAAGACGGCATACGAGATNNNNNNNNGTCTCGTGGGCTCGG'
+Using Long Clipping Sequence: 'CAAGCAGAAGACGGCATACGAGATNNNNNNNNGTCTCGTGGGCTCGG'
+Using Long Clipping Sequence: 'AATGATACGGCGACCACCGAGATCTACAC'
+Using Long Clipping Sequence: 'CAAGCAGAAGACGGCATACGAGATNNNNNNNNCGGTCTGCCTTGCCAGCCCGCTCAG'
+Using Long Clipping Sequence: 'CCGAGCCCACGAGACNNNNNNNNATCTCGTATGCCGTCTTCTGCTTG'
+Using Long Clipping Sequence: 'CTGAGCGGGCTGGCAAGGCAGACCGNNNNNNNNATCTCGTATGCCGTCTTCTGCTTG'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'GTGTAGATCTCGGTGGTCGCCGTATCATT'
+Using Long Clipping Sequence: 'ATCTCGTATGCCGTCTTCTGCTTG'
+Using Long Clipping Sequence: 'GACGCTGCCGACGANNNNNNNNGTGTAGATCTCGGTGGTCGCCGTATCATT'
+Using Long Clipping Sequence: 'AATGATACGGCGACCACCGAGATCTACACNNNNNNNNTCGTCGGCAGCGTC'
+Using Long Clipping Sequence: 'CAAGCAGAAGACGGCATACGAGAT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+ILLUMINACLIP: Using 3 prefix pairs, 14 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 9192 Both Surviving: 9192 (100.00%) Forward Only Surviving: 0 (0.00%) Reverse Only Surviving: 0 (0.00%) Dropped: 0 (0.00%)
+TrimmomaticPE: Completed successfully

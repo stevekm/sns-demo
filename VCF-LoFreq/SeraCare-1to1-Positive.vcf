@@ -1,0 +1,29 @@
+##fileformat=VCFv4.0
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20180201
+##source=lofreq call --call-indels --ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --no-default-filter -r chr13:113976587-113976666 -o /tmp/4494455.1.all.q/lofreq2_call_parallel6MxNcl/0.vcf.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam 
+##reference=/ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw Depth">
+##INFO=<ID=AF,Number=1,Type=Float,Description="Allele Frequency">
+##INFO=<ID=SB,Number=1,Type=Integer,Description="Phred-scaled strand bias at this position">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Counts for ref-forward bases, ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=CONSVAR,Number=0,Type=Flag,Description="Indicates that the variant is a consensus variant (as opposed to a low frequency variant).">
+##INFO=<ID=HRUN,Number=1,Type=Integer,Description="Homopolymer length to the right of report indel position">
+##FILTER=<ID=min_snvqual_41,Description="Minimum SNV Quality (Phred) 41">
+##FILTER=<ID=min_indelqual_23,Description="Minimum Indel Quality (Phred) 23">
+##FILTER=<ID=min_dp_10,Description="Minimum Coverage 10">
+##FILTER=<ID=sb_fdr,Description="Strand-Bias Multiple Testing Correction: fdr corr. pvalue > 0.001000">
+##FILTER=<ID=min_snvqual_51,Description="Minimum SNV Quality (Phred) 51">
+##FILTER=<ID=min_indelqual_29,Description="Minimum Indel Quality (Phred) 29">
+##contig=<ID=chr15>
+##contig=<ID=chr21>
+##bcftools_normVersion=1.3+htslib-1.3
+##bcftools_normCommand=norm --multiallelics -both --output-type v /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.original.vcf.bgz
+##bcftools_normCommand=norm --fasta-ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --output-type v -
+##bcftools_viewVersion=1.3+htslib-1.3
+##bcftools_viewCommand=view --exclude DP<5 --output-type v
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SeraCare-1to1-Positive
+chr15	99500617	.	CG	C	33	PASS	DP=889;AF=0.00225;SB=0;DP4=428,465,1,1;INDEL;HRUN=5
+chr21	46330674	.	C	A	11599	PASS	DP=976;AF=0.463115;SB=0;DP4=262,260,226,226
+chr21	46330677	.	TG	T	32	PASS	DP=970;AF=0.002062;SB=0;DP4=479,492,1,1;INDEL;HRUN=6

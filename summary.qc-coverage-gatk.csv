@@ -1,0 +1,3 @@
+#SAMPLE,MEAN COVERAGE,MEDIAN COVERAGE,%_bases_above_10,%_bases_above_50,%_bases_above_100,%_bases_above_500
+HapMap-B17-1267,815.10,1000,92.1,92.1,92.1,75.3
+SeraCare-1to1-Positive,608.36,781,92.1,92.1,91.3,70.8

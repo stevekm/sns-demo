@@ -1,0 +1,618 @@
+
+ ========== ROUTE: wes ========== 
+
+ * proj_dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo 
+ * sample: SeraCare-1to1-Positive 
+ * code_dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns 
+ * qsub_dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-qsub 
+ * threads: 16 
+
+ ========== SEGMENT: fastq-clean ========== 
+
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/SeraCare-1to1-Positive_S2_L001_R1_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R1.fastq.gz
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/SeraCare-1to1-Positive_S2_L001_R2_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R2.fastq.gz
+Thu Feb  1 19:33:55 EST 2018
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/SeraCare-1to1-Positive_S2_L002_R1_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R1.fastq.gz
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/SeraCare-1to1-Positive_S2_L002_R2_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R2.fastq.gz
+Thu Feb  1 19:34:25 EST 2018
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/SeraCare-1to1-Positive_S2_L003_R1_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R1.fastq.gz
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/SeraCare-1to1-Positive_S2_L003_R2_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R2.fastq.gz
+Thu Feb  1 19:34:55 EST 2018
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/SeraCare-1to1-Positive_S2_L004_R1_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R1.fastq.gz
+CMD: cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/fastq/SeraCare-1to1-Positive_S2_L004_R2_001.fastq.gz >> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R2.fastq.gz
+Thu Feb  1 19:35:25 EST 2018
+FASTQ R1: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R1.fastq.gz
+FASTQ R2: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R2.fastq.gz
+READS R1: 9192
+READS R2: 9192
+
+ ========== SEGMENT: fastq-trim-trimmomatic ========== 
+
+
+ * trimmomatic: /local/apps/trimmomatic/0.33/trimmomatic-0.33.jar 
+ * run type: PE 
+ * FASTQ R1: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R1.fastq.gz 
+ * FASTQ R2: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R2.fastq.gz 
+ * FASTQ R1 trimmed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.trim.fastq.gz 
+ * FASTQ R2 trimmed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.trim.fastq.gz 
+ * FASTQ R1 trimmed unpaired: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.unpaired.fastq.gz 
+ * FASTQ R2 trimmed unpaired: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.unpaired.fastq.gz 
+
+CMD: 
+java -Xms16G -Xmx16G -jar /local/apps/trimmomatic/0.33/trimmomatic-0.33.jar PE -threads 16 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R1.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-CLEAN/SeraCare-1to1-Positive_R2.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.unpaired.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.unpaired.fastq.gz ILLUMINACLIP:/ifs/home/id460/ref/contaminants/trimmomatic.fa:2:30:10:1:true TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:35 2> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-trimmomatic/SeraCare-1to1-Positive.txt
+
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.unpaired.fastq.gz'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.unpaired.fastq.gz'
+
+ ========== SEGMENT: align-bwa-mem ========== 
+
+
+ * bwa: /local/apps/bwa/0.7.17/bwa 
+ * bwa version: Version: 0.7.17-r1188 
+ * sambamba: /ifs/home/id460/software/sambamba/sambamba_v0.6.7 
+ * sambamba version: sambamba 0.6.7 
+ * BWA REF: /ifs/data/sequence/Illumina/igor/ref/hg19/BWA/genome.fa 
+ * FASTQ R1: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.trim.fastq.gz 
+ * FASTQ R2: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.trim.fastq.gz 
+ * BAM: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/SeraCare-1to1-Positive.bam 
+
+CMD: 
+bwa mem -M -v 1 -t 16 -R '@RG\tID:SeraCare-1to1-Positive\tSM:SeraCare-1to1-Positive\tLB:SeraCare-1to1-Positive\tPL:ILLUMINA' /ifs/data/sequence/Illumina/igor/ref/hg19/BWA/genome.fa /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.trim.fastq.gz | /ifs/home/id460/software/sambamba/sambamba_v0.6.7 view --sam-input --nthreads=16 --filter='mapping_quality>=10' --format=bam --compression-level=0 /dev/stdin | /ifs/home/id460/software/sambamba/sambamba_v0.6.7 sort --nthreads=16 --memory-limit=16GB --out=/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/SeraCare-1to1-Positive.bam /dev/stdin
+
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (142, 196, 267)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 517)
+[M::mem_pestat] mean and std.dev: (210.43, 89.71)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 642)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (122, 122, 249)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 503)
+[M::mem_pestat] mean and std.dev: (175.59, 90.09)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 630)
+[M::mem_pestat] skip orientation RR
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -M -v 1 -t 16 -R @RG\tID:SeraCare-1to1-Positive\tSM:SeraCare-1to1-Positive\tLB:SeraCare-1to1-Positive\tPL:ILLUMINA /ifs/data/sequence/Illumina/igor/ref/hg19/BWA/genome.fa /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R1.trim.fastq.gz /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/FASTQ-TRIMMED/SeraCare-1to1-Positive_R2.trim.fastq.gz
+[main] Real time: 18.942 sec; CPU: 19.575 sec
+CMD: /ifs/home/id460/software/sambamba/sambamba_v0.6.7 flagstat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/SeraCare-1to1-Positive.bam > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-align-bwa-mem/SeraCare-1to1-Positive.flagstat.txt
+
+ ========== SEGMENT: bam-dedup-sambamba ========== 
+
+ * sambamba: /ifs/home/id460/software/sambamba/sambamba_v0.6.7 
+ * sambamba version: sambamba 0.6.7 
+ * BAM IN: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/SeraCare-1to1-Positive.bam 
+ * BAM OUT: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam 
+CMD: 
+/ifs/home/id460/software/sambamba/sambamba_v0.6.7 markdup --remove-duplicates --nthreads 16 --hash-table-size 525000 --overflow-list-size 525000 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-BWA/SeraCare-1to1-Positive.bam /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam 2> /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-dedup-sambamba/SeraCare-1to1-Positive.log.txt
+
+CMD: /ifs/home/id460/software/sambamba/sambamba_v0.6.7 flagstat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-dedup-sambamba/SeraCare-1to1-Positive.flagstat.txt
+
+ ========== SEGMENT: qc-fragment-sizes ========== 
+
+ * R: /local/apps/R/3.3.0/bin/R 
+ * R version: R version 3.3.0 (2016-05-03) -- "Supposedly Educational" 
+ * Rscript: /local/apps/R/3.3.0/bin/Rscript 
+ * Rscript version: R scripting front-end version 3.3.0 (2016-05-03) 
+CMD: Rscript --vanilla /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/scripts/fragment-sizes.R SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam
+loading package: Rsamtools
+loading package: readr
+loading package: reshape2
+loading package: ggplot2
+loading package: cowplot
+mean: 220.2
+median: 203
+sd: 98.1
+Warning message:
+Removed 3 rows containing missing values (geom_path). 
+
+ ========== SEGMENT: qc-target-reads-gatk ========== 
+
+ * GATK: /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar 
+ * GATK version: 3.8-0-ge9d806836 
+ * BAM IN: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam 
+ * OUT PREFIX: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/SeraCare-1to1-Positive.genome 
+ * OUT PREFIX: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/SeraCare-1to1-Positive.pad500 
+ * OUT PREFIX: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/SeraCare-1to1-Positive.pad100 
+ * OUT PREFIX: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/SeraCare-1to1-Positive.bed 
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE -rf BadCigar -nt 16 --logging_level ERROR --omitIntervalStatistics --omitLocusTable --omitDepthOutputAtEachBase -ct 10 -ct 100 -mbq 20 -mmq 20 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/SeraCare-1to1-Positive.genome
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE -rf BadCigar -nt 16 --logging_level ERROR --omitIntervalStatistics --omitLocusTable --omitDepthOutputAtEachBase -ct 10 -ct 100 -mbq 20 -mmq 20 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 500 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/SeraCare-1to1-Positive.pad500
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE -rf BadCigar -nt 16 --logging_level ERROR --omitIntervalStatistics --omitLocusTable --omitDepthOutputAtEachBase -ct 10 -ct 100 -mbq 20 -mmq 20 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 100 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/SeraCare-1to1-Positive.pad100
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE -rf BadCigar -nt 16 --logging_level ERROR --omitIntervalStatistics --omitLocusTable --omitDepthOutputAtEachBase -ct 10 -ct 100 -mbq 20 -mmq 20 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-target-reads/SeraCare-1to1-Positive.bed
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+genome total coverage: 1259270
+bed +/- 500bp total coverage: 895638
+bed +/- 500bp %: 71.1%
+bed +/- 100bp total coverage: 797008
+bed +/- 100bp %: 63.2%
+bed total coverage: 500677
+bed %: 39.7%
+
+ ========== SEGMENT: bam-ra-rc-gatk ========== 
+
+
+ * R: /local/apps/R/3.3.0/bin/R 
+ * R version: R version 3.3.0 (2016-05-03) -- "Supposedly Educational" 
+ * Rscript: /local/apps/R/3.3.0/bin/Rscript 
+ * Rscript version: R scripting front-end version 3.3.0 (2016-05-03) 
+
+checking R package: getopt
+loading package: getopt
+checking R package: optparse
+loading package: optparse
+checking R package: gsalib
+loading package: gsalib
+checking R package: reshape
+loading package: reshape
+checking R package: gplots
+loading package: gplots
+checking R package: ggplot2
+loading package: ggplot2
+checking R package: data.table
+loading package: data.table
+checking R package: naturalsort
+loading package: naturalsort
+
+ * GATK: /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar 
+ * GATK version: 3.8-0-ge9d806836 
+ * BAM IN: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam 
+ * BAM RA: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/SeraCare-1to1-Positive.dd.ra.bam 
+
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T RealignerTargetCreator -dt NONE --logging_level ERROR -nt 16 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -known /ifs/home/id460/ref/hg19/gatk-bundle/1000G_phase1.indels.hg19.vcf -known /ifs/home/id460/ref/hg19/gatk-bundle/Mills_and_1000G_gold_standard.indels.hg19.vcf --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 10 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.intervals
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T IndelRealigner -dt NONE --logging_level ERROR --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --maxReadsForRealignment 50000 -known /ifs/home/id460/ref/hg19/gatk-bundle/1000G_phase1.indels.hg19.vcf -known /ifs/home/id460/ref/hg19/gatk-bundle/Mills_and_1000G_gold_standard.indels.hg19.vcf -targetIntervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.intervals --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/SeraCare-1to1-Positive.dd.ra.bam
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T BaseRecalibrator --logging_level ERROR -nct 16 -rf BadCigar --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/1000G_phase1.indels.hg19.vcf -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/Mills_and_1000G_gold_standard.indels.hg19.vcf -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/dbsnp_138.hg19.vcf --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 10 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/SeraCare-1to1-Positive.dd.ra.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.table1.txt
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T BaseRecalibrator --logging_level ERROR -nct 16 -rf BadCigar --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/1000G_phase1.indels.hg19.vcf -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/Mills_and_1000G_gold_standard.indels.hg19.vcf -knownSites /ifs/home/id460/ref/hg19/gatk-bundle/dbsnp_138.hg19.vcf --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 10 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/SeraCare-1to1-Positive.dd.ra.bam -BQSR /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.table1.txt --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.table2.txt
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T AnalyzeCovariates --logging_level ERROR --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -before /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.table1.txt -after /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.table2.txt -csv /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.csv -plots /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.pdf
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T PrintReads --logging_level ERROR -nct 16 -rf BadCigar --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa -BQSR /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.table1.txt --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/SeraCare-1to1-Positive.dd.ra.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+`/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bai' -> `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam.bai'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-DD/SeraCare-1to1-Positive.dd.bam.bai'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/SeraCare-1to1-Positive.dd.ra.bam'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA/SeraCare-1to1-Positive.dd.ra.bai'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.intervals'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.table1.txt'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/logs-bam-ra-rc-gatk/SeraCare-1to1-Positive.table2.txt'
+
+ ========== SEGMENT: qc-coverage-gatk ========== 
+
+ * GATK: /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar 
+ * GATK version: 3.8-0-ge9d806836 
+ * BAM: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam 
+ * BED: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed 
+ * output prefix: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/SeraCare-1to1-Positive 
+ * sample_summary: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/SeraCare-1to1-Positive.sample_summary 
+CMD: 
+java -Xms32G -Xmx32G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T DepthOfCoverage -dt NONE --logging_level ERROR -rf BadCigar --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --omitDepthOutputAtEachBase -ct 10 -ct 50 -ct 100 -ct 500 -mbq 20 -mmq 20 --nBins 999 --start 1 --stop 1000 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam --outputFormat csv --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/SeraCare-1to1-Positive
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/SeraCare-1to1-Positive.sample_statistics'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/QC-coverage/SeraCare-1to1-Positive.sample_interval_statistics'
+
+ ========== SEGMENT: snvs-lofreq ========== 
+
+
+ * LoFreq: /ifs/home/id460/bin/lofreq 
+ * LoFreq version: version: 2.1.2 
+ * BAM: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam 
+ * BED: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.pad10.bed 
+ * VCF original: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.original.vcf 
+ * VCF fixed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.vcf 
+
+
+ CMD: 
+/ifs/home/id460/bin/lofreq call-parallel --call-indels --pp-threads 16 --ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --bed /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.pad10.bed --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.original.vcf /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam
+ 
+
+INFO [2018-02-01 19:51:09,035]: Using 16 threads with following basic args: lofreq call --call-indels --ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam
+
+WARNING [2018-02-01 19:51:09,044]: Regions getting too small to be efficiently processed
+INFO [2018-02-01 19:51:09,051]: Adding 16 commands to mp-pool
+Number of substitution tests performed: 1209
+Number of indel tests performed: 8
+INFO [2018-02-01 19:51:11,491]: Executing lofreq filter -i /tmp/4494455.1.all.q/lofreq2_call_parallel6MxNcl/concat.vcf.gz -o /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.original.vcf --snvqual-thresh 51 --indelqual-thresh 29
+
+
+ CMD: bgzip -c /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.original.vcf > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.original.vcf.bgz 
+
+
+ CMD: bcftools index /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.original.vcf.bgz 
+
+
+ CMD: 
+bcftools norm --multiallelics -both --output-type v /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.original.vcf.bgz | bcftools norm --fasta-ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --output-type v - | bcftools view --exclude 'DP<5' --output-type v > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.vcf
+ 
+
+Lines   total/split/realigned/skipped:	3/0/0/0
+Lines   total/split/realigned/skipped:	3/0/0/0
+
+ CMD: bash /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/segments/annot-annovar.sh /ifs/data/molecpathlab/NGS580_WES-development/sns-demo SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.vcf 
+
+
+ ========== SEGMENT: annot-annovar ========== 
+
+
+ CMD: 
+perl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/scripts/vcf-table.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.vcf SeraCare-1to1-Positive | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.vcf.txt
+ 
+
+
+ * convert2annovar path: /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot 
+ * convert2annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl --format vcf4old --includeinfo /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq/SeraCare-1to1-Positive.vcf > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput
+ 
+
+NOTICE: Read 29 lines and wrote 0 different variants at 3 genomic positions (1 SNPs and 2 indels)
+NOTICE: Among 3 different variants at 3 positions, 0 are heterozygotes, 0 are homozygotes
+NOTICE: Among 1 SNPs, 0 are transitions, 1 are transversions (ratio=0.00)
+
+ * table_annovar path: /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot 
+ * table_annovar out prefix : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive 
+ * table_annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_multianno.txt 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ --outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive --buildver hg19 --protocol refGene,avsnp147,gnomad_exome,gnomad_genome,kaviar_20150923,cosmic80,cadd13gt10,fathmm --operation g,f,f,f,f,f,f,f --argument '--splicing_threshold 10',,,,,,, --nastring . --remove
+ 
+
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.refGene -exonsort /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ --splicing_threshold 10>
+NOTICE: Output files were written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.refGene.variant_function, /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.refGene.exonic_variant_function
+NOTICE: Reading gene annotation from /ifs/home/id460/ref/annovar/hg19/hg19_refGene.txt ... Done with 63481 transcripts (including 15216 without coding sequence annotation) for 27720 unique genes
+NOTICE: Processing next batch with 3 unique variants in 3 input lines
+NOTICE: Reading FASTA sequences from /ifs/home/id460/ref/annovar/hg19/hg19_refGeneMrna.fa ... Done with 4 sequences
+WARNING: A total of 405 sequences will be ignored due to lack of correct ORF annotation
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=avsnp147
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype avsnp147 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_avsnp147_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_avsnp147_filtered
+NOTICE: Processing next batch with 3 unique variants in 3 input lines
+NOTICE: Database index loaded. Total number of bins is 27868332 and the number of bins to be scanned is 2
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_avsnp147.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_exome
+NOTICE: Finished reading 9 column headers for '-dbtype gnomad_exome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_exome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_exome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_gnomad_exome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_gnomad_exome_filtered
+NOTICE: Processing next batch with 3 unique variants in 3 input lines
+NOTICE: Database index loaded. Total number of bins is 772860 and the number of bins to be scanned is 2
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_exome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_genome
+NOTICE: Finished reading 8 column headers for '-dbtype gnomad_genome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_genome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_genome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_gnomad_genome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_gnomad_genome_filtered
+NOTICE: Processing next batch with 3 unique variants in 3 input lines
+NOTICE: Database index loaded. Total number of bins is 28127612 and the number of bins to be scanned is 2
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_genome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=kaviar_20150923
+NOTICE: Finished reading 3 column headers for '-dbtype kaviar_20150923'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype kaviar_20150923 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype kaviar_20150923 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_kaviar_20150923_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_kaviar_20150923_filtered
+NOTICE: Processing next batch with 3 unique variants in 3 input lines
+NOTICE: Database index loaded. Total number of bins is 28259366 and the number of bins to be scanned is 2
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_kaviar_20150923.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cosmic80
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cosmic80 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: the --dbtype cosmic80 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_cosmic80_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_cosmic80_filtered
+NOTICE: Processing next batch with 3 unique variants in 3 input lines
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cosmic80.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cadd13gt10
+NOTICE: Finished reading 2 column headers for '-dbtype cadd13gt10'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cadd13gt10 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype cadd13gt10 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_cadd13gt10_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_cadd13gt10_filtered
+NOTICE: Processing next batch with 3 unique variants in 3 input lines
+NOTICE: Database index loaded. Total number of bins is 13643770 and the number of bins to be scanned is 2
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cadd13gt10.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=fathmm
+NOTICE: Finished reading 2 column headers for '-dbtype fathmm'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype fathmm -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype fathmm is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_fathmm_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_fathmm_filtered
+NOTICE: Processing next batch with 3 unique variants in 3 input lines
+NOTICE: Database index loaded. Total number of bins is 28581845 and the number of bins to be scanned is 2
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_fathmm.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_multianno.txt
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.hg19_multianno.txt | awk -F $'	' 'BEGIN {OFS=FS} {print $1 ":" $2 ":" $4 ":" $5, $0}' | cut -f 1,5,6,7,8,9,10,11,12,13,22,30,33,35,36,37 | sed 's/Chr:Start:Ref:Alt/#MUT/g' | sed 's/avsnp1/dbSNP_1/g' | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.annot.txt
+ 
+
+
+ CMD: 
+LC_ALL=C join -a1 -t $'	' /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.vcf.txt /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.annot.txt > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.combined.txt
+ 
+
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.avinput'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/SeraCare-1to1-Positive.annot.txt'
+total muts: 1
+coding muts: 1
+nonsynonymous muts: 1
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot/*.combined.txt | LC_ALL=C sort -k1,1 -k2,2 | uniq > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.all.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.all.txt | grep -E 'refGene|exon|splicing' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.coding.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.all.txt | grep -E 'refGene|splicing|nonsynonymous|stopgain|stoploss|frameshift' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-LoFreq-annot.nonsyn.txt
+ 
+
+
+ ========== SEGMENT: snvs-gatk-hc ========== 
+
+
+ * GATK: /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar 
+ * GATK version: 3.8-0-ge9d806836 
+ * BAM: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam 
+ * INTERVALS: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed 
+ * VCF original: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/SeraCare-1to1-Positive.original.vcf 
+ * VCF fixed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/SeraCare-1to1-Positive.vcf 
+
+
+ CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T HaplotypeCaller -dt NONE --logging_level ERROR -nct 16 --max_alternate_alleles 3 --standard_min_confidence_threshold_for_calling 50 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 10 --input_file /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/SeraCare-1to1-Positive.original.vcf
+ 
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+[INFO] Available threads: 32
+[INFO] Requested threads: 1
+[INFO] Using 1 threads
+[INFO] Available threads: 32
+[INFO] Requested threads: 1
+[INFO] Using 1 threads
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/SeraCare-1to1-Positive.original.vcf | bcftools norm --multiallelics -both --output-type v - | bcftools norm --fasta-ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --output-type v - | bcftools view --exclude 'DP<5' --output-type v > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/SeraCare-1to1-Positive.vcf
+ 
+
+Lines   total/split/realigned/skipped:	1/0/0/0
+Lines   total/split/realigned/skipped:	1/0/0/0
+
+ CMD: bash /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/segments/annot-annovar.sh /ifs/data/molecpathlab/NGS580_WES-development/sns-demo SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/SeraCare-1to1-Positive.vcf 
+
+
+ ========== SEGMENT: annot-annovar ========== 
+
+
+ CMD: 
+perl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/scripts/vcf-table.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/SeraCare-1to1-Positive.vcf SeraCare-1to1-Positive | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.vcf.txt
+ 
+
+
+ * convert2annovar path: /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot 
+ * convert2annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl --format vcf4old --includeinfo /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC/SeraCare-1to1-Positive.vcf > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput
+ 
+
+NOTICE: Read 60 lines and wrote 1 different variants at 1 genomic positions (1 SNPs and 0 indels)
+NOTICE: Among 1 different variants at 1 positions, 1 are heterozygotes, 0 are homozygotes
+NOTICE: Among 1 SNPs, 0 are transitions, 1 are transversions (ratio=0.00)
+
+ * table_annovar path: /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot 
+ * table_annovar out prefix : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive 
+ * table_annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_multianno.txt 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/table_annovar.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ --outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive --buildver hg19 --protocol refGene,avsnp147,gnomad_exome,gnomad_genome,kaviar_20150923,cosmic80,cadd13gt10,fathmm --operation g,f,f,f,f,f,f,f --argument '--splicing_threshold 10',,,,,,, --nastring . --remove
+ 
+
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.refGene -exonsort /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ --splicing_threshold 10>
+NOTICE: Output files were written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.refGene.variant_function, /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.refGene.exonic_variant_function
+NOTICE: Reading gene annotation from /ifs/home/id460/ref/annovar/hg19/hg19_refGene.txt ... Done with 63481 transcripts (including 15216 without coding sequence annotation) for 27720 unique genes
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Reading FASTA sequences from /ifs/home/id460/ref/annovar/hg19/hg19_refGeneMrna.fa ... Done with 2 sequences
+WARNING: A total of 405 sequences will be ignored due to lack of correct ORF annotation
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=avsnp147
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype avsnp147 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_avsnp147_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_avsnp147_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 27868332 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_avsnp147.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_exome
+NOTICE: Finished reading 9 column headers for '-dbtype gnomad_exome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_exome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_exome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_gnomad_exome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_gnomad_exome_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 772860 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_exome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_genome
+NOTICE: Finished reading 8 column headers for '-dbtype gnomad_genome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_genome -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype gnomad_genome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_gnomad_genome_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_gnomad_genome_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 28127612 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_gnomad_genome.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=kaviar_20150923
+NOTICE: Finished reading 3 column headers for '-dbtype kaviar_20150923'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype kaviar_20150923 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype kaviar_20150923 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_kaviar_20150923_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_kaviar_20150923_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 28259366 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_kaviar_20150923.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cosmic80
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cosmic80 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/>
+NOTICE: the --dbtype cosmic80 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_cosmic80_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_cosmic80_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cosmic80.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cadd13gt10
+NOTICE: Finished reading 2 column headers for '-dbtype cadd13gt10'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cadd13gt10 -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype cadd13gt10 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_cadd13gt10_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_cadd13gt10_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 13643770 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_cadd13gt10.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=fathmm
+NOTICE: Finished reading 2 column headers for '-dbtype fathmm'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype fathmm -buildver hg19 -outfile /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput /ifs/home/id460/ref/annovar/hg19/ -otherinfo>
+NOTICE: the --dbtype fathmm is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_fathmm_dropped, other variants are written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_fathmm_filtered
+NOTICE: Processing next batch with 1 unique variants in 1 input lines
+NOTICE: Database index loaded. Total number of bins is 28581845 and the number of bins to be scanned is 1
+NOTICE: Scanning filter database /ifs/home/id460/ref/annovar/hg19/hg19_fathmm.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_multianno.txt
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.hg19_multianno.txt | awk -F $'	' 'BEGIN {OFS=FS} {print $1 ":" $2 ":" $4 ":" $5, $0}' | cut -f 1,5,6,7,8,9,10,11,12,13,22,30,33,35,36,37 | sed 's/Chr:Start:Ref:Alt/#MUT/g' | sed 's/avsnp1/dbSNP_1/g' | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.annot.txt
+ 
+
+
+ CMD: 
+LC_ALL=C join -a1 -t $'	' /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.vcf.txt /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.annot.txt > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.combined.txt
+ 
+
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.avinput'
+removed `/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/SeraCare-1to1-Positive.annot.txt'
+total muts: 1
+coding muts: 1
+nonsynonymous muts: 1
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot/*.combined.txt | LC_ALL=C sort -k1,1 -k2,2 | uniq > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.all.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.all.txt | grep -E 'refGene|exon|splicing' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.coding.txt
+ 
+
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.all.txt | grep -E 'refGene|splicing|nonsynonymous|stopgain|stoploss|frameshift' > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-GATK-HC-annot.nonsyn.txt
+ 
+
+Thu Feb  1 20:08:40 EST 2018

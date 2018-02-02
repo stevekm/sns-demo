@@ -1,0 +1,102 @@
+GraphBuildTime	0.0595h wall, 0.0518h user + 0.0013h system = 0.0531h CPU (89.18%)
+GraphMergeTime	0.0000h wall, 0.0000h user + 0.0000h system = 0.0000h CPU (19.58%)
+disjointSubgraphs	17
+nodes	24
+directedEdges	29
+selfEdges	15
+totalGraphEvidence	2315
+totalCleaned	283
+highestSearchCount	36
+isMaxSearchCount	0
+highestSearchDensity	0.0625
+isMaxSearchDensity	0
+
+[Sample0]
+Source	/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam
+MinMapqFiltered	0	0.0000
+NotFiltered	12614	1.0000
+NotFilteredAndIgnored	12093	0.9587
+NotFilteredAndAnomalousPair	306	0.0243
+NotFilteredAndAnomalousPairRemotes	34	0.0027
+NotFilteredAndSplitRead	397	0.0315
+NotFilteredAndLargeIndel	0	0.0000
+NotFilteredAndSemiAligned	74	0.0059
+EvidenceType_pair	0	0.0000
+EvidenceType_local_pair	73	0.1352
+EvidenceType_cigar	0	0.0000
+EvidenceType_softclip	0	0.0000
+EvidenceType_semialign	74	0.1370
+EvidenceType_shadow	0	0.0000
+EvidenceType_split_align	393	0.7278
+EvidenceType_unknown	0	0.0000
+ClosePairs	10
+
+[Sample1]
+Source	/ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam
+MinMapqFiltered	1	0.0001
+NotFiltered	9650	0.9999
+NotFilteredAndIgnored	9327	0.9664
+NotFilteredAndAnomalousPair	167	0.0173
+NotFilteredAndAnomalousPairRemotes	18	0.0019
+NotFilteredAndSplitRead	244	0.0253
+NotFilteredAndLargeIndel	0	0.0000
+NotFilteredAndSemiAligned	49	0.0051
+EvidenceType_pair	0	0.0000
+EvidenceType_local_pair	42	0.1257
+EvidenceType_cigar	0	0.0000
+EvidenceType_softclip	0	0.0000
+EvidenceType_semialign	49	0.1467
+EvidenceType_shadow	0	0.0000
+EvidenceType_split_align	243	0.7275
+EvidenceType_unknown	0	0.0000
+ClosePairs	2
+
+NodeRegionSizequantile:
+0.25	75
+0.5	136
+0.75	191
+0.9	451
+0.95	675
+0.99	773
+NodeEdgeCount:
+0	0
+1	20
+2	3
+3	1
+4	0
+5	0
+6	0
+7	0
+8	0
+9+	0
+NodeObservationCount:
+0	4
+1	0
+2	0
+3	0
+4	0
+5	0
+6	0
+7	0
+8	0
+9	7
+10	0
+11	0
+12	1
+13	0
+14	0
+15	3
+16	0
+17	0
+18	0
+19	0
+20	0
+21	0
+22	0
+23	0
+24	0
+25	0
+26	0
+27	0
+28	0
+29+	9

@@ -1,0 +1,1 @@
+#MUT	SAMPLE_T	SAMPLE_N	CHR	POS	QUAL	T_DEPTH	T_FREQ	N_DEPTH	N_FREQ	Ref	Alt	Func.refGene	Gene.refGene	GeneDetail.refGene	ExonicFunc.refGene	AAChange.refGene	dbSNP_147	gnomAD_exome_ALL	gnomAD_genome_ALL	Kaviar_AF	cosmic80	CADD13_PHRED	FATHMM_noncoding	FATHMM_coding

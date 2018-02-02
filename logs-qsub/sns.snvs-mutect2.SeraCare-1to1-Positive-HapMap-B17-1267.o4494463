@@ -1,0 +1,61 @@
+
+ ========== SEGMENT: snvs-mutect2 ========== 
+
+ * GATK: /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar 
+ * GATK version: 3.8-0-ge9d806836 
+ * sample T : SeraCare-1to1-Positive 
+ * BAM T : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam 
+ * sample N : HapMap-B17-1267 
+ * BAM N : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam 
+ * INTERVALS: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed 
+ * DBSNP VCF: /ifs/home/id460/ref/hg19/gatk-bundle/dbsnp_138.hg19.vcf 
+ * COSMIC VCF: /ifs/home/id460/ref/hg19/CosmicCodingMuts_v73.hg19.vcf 
+ * VCF original: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2/SeraCare-1to1-Positive-HapMap-B17-1267.original.vcf 
+ * VCF fixed: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2/SeraCare-1to1-Positive-HapMap-B17-1267.vcf 
+
+ CMD: 
+java -Xms16G -Xmx16G -jar /ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar -T MuTect2 -dt NONE --logging_level WARN --standard_min_confidence_threshold_for_calling 30 --max_alt_alleles_in_normal_count 10 --max_alt_allele_in_normal_fraction 0.05 --max_alt_alleles_in_normal_qscore_sum 40 --reference_sequence /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --dbsnp /ifs/home/id460/ref/hg19/gatk-bundle/dbsnp_138.hg19.vcf --cosmic /ifs/home/id460/ref/hg19/CosmicCodingMuts_v73.hg19.vcf --intervals /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/targets.bed --interval_padding 10 --input_file:tumor /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/SeraCare-1to1-Positive.dd.ra.rc.bam --input_file:normal /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/BAM-GATK-RA-RC/HapMap-B17-1267.dd.ra.rc.bam --out /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2/SeraCare-1to1-Positive-HapMap-B17-1267.original.vcf
+ 
+
+ERROR StatusLogger Unable to create class org.apache.logging.log4j.core.impl.Log4jContextFactory specified in jar:file:/ifs/home/id460/software/GenomeAnalysisTK/GenomeAnalysisTK-3.8-0/GenomeAnalysisTK.jar!/META-INF/log4j-provider.properties
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+[INFO] Available threads: 32
+[INFO] Requested threads: 1
+[INFO] Using 1 threads
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+
+ CMD: 
+cat /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2/SeraCare-1to1-Positive-HapMap-B17-1267.original.vcf | grep -E '^#|PASS' | bcftools norm --multiallelics -both --output-type v - | bcftools norm --fasta-ref /ifs/data/sequence/Illumina/igor/ref/hg19/genome.fa --output-type v - > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2/SeraCare-1to1-Positive-HapMap-B17-1267.vcf
+ 
+
+Lines   total/split/realigned/skipped:	0/0/0/0
+Lines   total/split/realigned/skipped:	0/0/0/0
+
+ CMD: bash /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/segments/annot-annovar.sh /ifs/data/molecpathlab/NGS580_WES-development/sns-demo SeraCare-1to1-Positive:HapMap-B17-1267 /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2/SeraCare-1to1-Positive-HapMap-B17-1267.vcf 
+
+
+ ========== SEGMENT: annot-annovar ========== 
+
+
+ CMD: 
+perl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/sns/scripts/vcf-table.pl /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2/SeraCare-1to1-Positive-HapMap-B17-1267.vcf SeraCare-1to1-Positive:HapMap-B17-1267 | LC_ALL=C sort -k1,1 > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2-annot/SeraCare-1to1-Positive-HapMap-B17-1267.vcf.txt
+ 
+
+
+ * convert2annovar path: /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl 
+ * ANNOVAR out dir: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2-annot 
+ * convert2annovar out : /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput 
+
+
+ CMD: 
+perl /ifs/home/id460/software/annovar/annovar-170716/convert2annovar.pl --format vcf4old --includeinfo /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2/SeraCare-1to1-Positive-HapMap-B17-1267.vcf > /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput
+ 
+
+NOTICE: Read 71 lines and wrote 0 different variants at 0 genomic positions (0 SNPs and 0 indels)
+NOTICE: Among 0 different variants at 0 positions, 0 are heterozygotes, 0 are homozygotes
+NOTICE: Among 0 SNPs, 0 are transitions, 0 are transversions (ratio=NA)
+
+ annot-annovar.sh ERROR: /ifs/data/molecpathlab/NGS580_WES-development/sns-demo/VCF-MuTect2-annot/SeraCare-1to1-Positive-HapMap-B17-1267.avinput IS EMPTY 
+

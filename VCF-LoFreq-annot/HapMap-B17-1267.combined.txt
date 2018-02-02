@@ -1,0 +1,2 @@
+#MUT	SAMPLE	CHR	POS	QUAL	DEPTH	FREQ	Ref	Alt	Func.refGene	Gene.refGene	GeneDetail.refGene	ExonicFunc.refGene	AAChange.refGene	dbSNP_147	gnomAD_exome_ALL	gnomAD_genome_ALL	Kaviar_AF	cosmic80	CADD13_PHRED	FATHMM_noncoding	FATHMM_coding
+chr21:46330674:C:A	HapMap-B17-1267	chr21	46330674	17218	1315	0.492	C	A	exonic	ITGB2	.	synonymous SNV	ITGB2:NM_000211:exon2:c.G24T:p.L8L,ITGB2:NM_001127491:exon2:c.G24T:p.L8L	rs11088969	0.2113	0.2049	0.212507	ID=COSM3758939;OCCURENCE=3(large_intestine),1(biliary_tract)	10.98	0.19279	0.08677
